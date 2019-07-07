@@ -3,6 +3,7 @@
   <head>
    <meta charset="utf-8">
    <title>Best Execution RTS</title>
+   <script src="js/sorttable.js"></script>
   </head>
   <body>    
 

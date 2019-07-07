@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8">
+   <title>Best Execution RTS</title>
+  </head>
+  <body>    
+
 <?php 
 
     $handle = fopen("GSI_2019-03-18.txt", "r");
@@ -49,3 +57,7 @@
 
 
 ?>
+
+
+  </body>
+</html>

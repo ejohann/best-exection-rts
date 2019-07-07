@@ -8,6 +8,15 @@
   </head>
   <body>    
 
+    <form enctype="multipart/form-data" action="" method="POST">
+
+    <!--    <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> -->
+
+        Process this file: <input name="userfile" type="file" required />
+       <input type="submit" value="Process File" />
+    </form>
+
+
 <?php 
 
     $handle = fopen("GSI_2019-03-09.txt", "r");

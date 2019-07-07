@@ -26,10 +26,11 @@
               { 
                 echo "<thead><tr>";
                 $columns = explode("|",$line);
-                            
+                  $i = 1;          
                 foreach($columns as $column)
                  {
-                   echo "<th>" .$column. "</th>";       
+                   echo "<th> " .$i.". " .$column. "</th>";
+                    $i++;
                  }
                 echo "</tr></thead>";
               }

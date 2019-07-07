@@ -13,11 +13,20 @@
     <!--    <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> -->
 
         Process this file: <input name="userfile" type="file" required />
-       <input type="submit" value="Process File" />
+       <input type="submit" name="submit" value="Process File" />
     </form>
 
 
 <?php 
+      
+    if(isset($_POST['submit']))
+    {      
+      $user_file = $_FILES['userfile']['name'];
+      $user_file_temp = $_FILES['userfile']['tmp_name'];
+
+       move_uploaded_file($user_file_temp, "files/$user_file");
+            
+    }
 
     $handle = fopen("GSI_2019-03-09.txt", "r");
     

@@ -17,38 +17,51 @@
       //echo count($handle);
            
       $count = 0;
-      echo "<table>";
+      echo "<table class='sortable'>";
         while (($line = fgets($handle)) !== false)
          {
             
             if($count == 0)
               { 
-                echo "<tr>";
+                echo "<thead><tr>";
                 $columns = explode("|",$line);
                             
                 foreach($columns as $column)
                  {
                    echo "<th>" .$column. "</th>";       
                  }
-                echo "</tr>";
+                echo "</tr></thead>";
               }
             else
              {
-                echo "<tr>";
-                $rows = explode("|",$line);            
-                foreach($rows as $row)
+                if($count == 1)
                  {
-                   echo "<td>" .$row. "</th>";  
-                 }
-                 echo "</tr>";
-                 
-            }
+                    echo "<tbody>"; 
+                    echo "<tr>";
+                    $rows = explode("|",$line);            
+                    foreach($rows as $row)
+                      {
+                        echo "<td>" .$row. "</th>";  
+                      }
+                     echo "</tr>";    
+                  }
+                else
+                 {                
+                    echo "<tr>";
+                    $rows = explode("|",$line);            
+                    foreach($rows as $row)
+                     {
+                        echo "<td>" .$row. "</th>";  
+                     }
+                    echo "</tr>";
+                 }                 
+             }
             
             $count++;
          }
 
         fclose($handle);
-      echo "</table>";
+      echo "</tbody></table>";
     } 
   else 
    {

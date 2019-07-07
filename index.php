@@ -25,10 +25,9 @@
       $user_file_temp = $_FILES['userfile']['tmp_name'];
 
        move_uploaded_file($user_file_temp, "files/$user_file");
-            
-    }
 
-    $handle = fopen("GSI_2019-03-09.txt", "r");
+     $filename = "files/$user_file";
+        $handle = fopen($filename, "r");
     
   if($handle) 
      {
@@ -87,7 +86,12 @@
    {
       // error opening the file.
    } 
+  
+        
+            
+    }
 
+  
 
 
 ?>

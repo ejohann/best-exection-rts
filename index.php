@@ -8,7 +8,7 @@
 
 <?php 
 
-    $handle = fopen("GSI_2019-03-18.txt", "r");
+    $handle = fopen("GSI_2019-03-09.txt", "r");
     
   if($handle) 
      {

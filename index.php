@@ -27,9 +27,9 @@
      if($handle) 
       {  
         $count = 0;
-        echo "<hr><h2><strong>Please click on column heading to sort.</strong></h2>";
+        echo "<hr><h2>File may take a while to upload... be patient! <strong>File: ".$user_file."</strong></h2>";
         echo "<table class='sortable'>";
-        while (($line = fgets($handle)) !== false)
+        while(($line = fgets($handle)) !== false)
           { 
             if($count == 0)
              { 
@@ -70,8 +70,8 @@
             $count++;
           }
          fclose($handle);
-         unlink( $filename);
          echo "</tbody></table>";
+         unlink($filename);
       } 
      else 
       {

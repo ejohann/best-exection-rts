@@ -80,6 +80,7 @@
          }
 
         fclose($handle);
+      unlink( $filename);
       echo "</tbody></table>";
     } 
   else 
